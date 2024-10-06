@@ -1,0 +1,113 @@
+//funzione colore testo in base a bg
+@function set-text-color($color) {
+    @if(lightness($color)>70) {
+        @return #333;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+//mixin per settare colore background e testo
+@mixin set-background-and-text($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+body {
+    @include set-background-and-text(white);
+
+    nav {
+        @include set-background-and-text(orange);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.299);
+        padding: 0 20px;
+        margin: 0px auto;
+        max-width: 70rem;
+
+        ul {
+            display: flex;
+
+            li {
+                margin: 0px 10px;
+                list-style-type: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: medium
+        }
+
+
+
+    }
+
+    .news-item {
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.299);
+        @include set-background-and-text(rgba(255, 255, 255, 0.916));
+        //max-width: 60%;
+        max-width: 60rem;
+        margin: 20px auto;
+        padding: 0 30px;
+
+        h3 {
+            margin-bottom: 7px;
+
+            a {
+                font-size: large;
+                text-decoration: none;
+                /* text-transform: uppercase; */
+                color: black;
+
+                &:hover {
+                    color: lighten($color: blue, $amount: 10%)
+                }
+            }
+        }
+
+
+        p {
+            font-size: small;
+            margin-top: 0;
+        }
+    }
+
+    #load-more {
+        @include set-background-and-text(orange);
+        display: block;
+        margin: 20px auto;
+        height: 40px;
+        border-radius: 10px;
+
+        &:hover {
+            @include set-background-and-text(lighten($color: orange, $amount: 10%));
+            cursor: pointer;
+        }
+
+    }
+
+    .search-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+            outline: none;
+        }
+    }
+
+}

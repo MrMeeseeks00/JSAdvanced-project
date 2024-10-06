@@ -9,6 +9,9 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
@@ -20,110 +23,128 @@ var newsContainer = document.getElementById('news-container');
 var loadMoreButton = document.getElementById('load-more');
 var errorMessage = document.getElementById('error-message');
 var loadingMessage = document.getElementById('loading');
-var filterInput = document.getElementById('filter-input');
+var searchInput = document.getElementById('search-input');
 var newsIDs = [];
 var currentIndex = 0;
-var newsPerPage = 10;
+var newsPerPagina = 10;
 var allNews = [];
-function fetchNewsIDs() {
-  return _fetchNewsIDs.apply(this, arguments);
+function fetchNewStoriesIDs() {
+  return _fetchNewStoriesIDs.apply(this, arguments);
 }
-function _fetchNewsIDs() {
-  _fetchNewsIDs = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var response;
+/* beststories */
+function _fetchNewStoriesIDs() {
+  _fetchNewStoriesIDs = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var risposta;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
+          //prendo tutte le news
           setLoading(true);
           _context.prev = 1;
           _context.next = 4;
           return axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('https://hacker-news.firebaseio.com/v0/newstories.json');
         case 4:
-          response = _context.sent;
-          if (!(response.status !== 200)) {
+          risposta = _context.sent;
+          if (!(risposta.status !== 200)) {
             _context.next = 7;
             break;
           }
-          throw new Error("Error fetching news IDs: ".concat(response.statusText));
+          throw new Error("Error fetching news IDs: ".concat(risposta.statusText));
         case 7:
-          newsIDs = response.data;
-          loadMoreNews();
-          _context.next = 14;
+          if (newsIDs.length !== 0 && allNews.length !== 0 && currentIndex !== 0) {
+            clearNews();
+          }
+          newsIDs = risposta.data;
+          loadNews();
+          _context.next = 15;
           break;
-        case 11:
-          _context.prev = 11;
+        case 12:
+          _context.prev = 12;
           _context.t0 = _context["catch"](1);
           displayError(_context.t0.message);
-        case 14:
-          _context.prev = 14;
+        case 15:
+          _context.prev = 15;
           setLoading(false);
-          return _context.finish(14);
-        case 17:
+          return _context.finish(15);
+        case 18:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[1, 11, 14, 17]]);
+    }, _callee, null, [[1, 12, 15, 18]]);
   }));
-  return _fetchNewsIDs.apply(this, arguments);
+  return _fetchNewStoriesIDs.apply(this, arguments);
 }
-function fetchNewsDetails(_x) {
-  return _fetchNewsDetails.apply(this, arguments);
+function fetchBestStoriesIDs() {
+  return _fetchBestStoriesIDs.apply(this, arguments);
 }
-function _fetchNewsDetails() {
-  _fetchNewsDetails = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(id) {
-    var response;
+function _fetchBestStoriesIDs() {
+  _fetchBestStoriesIDs = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    var risposta;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.prev = 0;
-          _context2.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("https://hacker-news.firebaseio.com/v0/item/".concat(id, ".json"));
-        case 3:
-          response = _context2.sent;
-          if (!(response.status !== 200)) {
-            _context2.next = 6;
+          //prendo tutte le news
+          setLoading(true);
+          _context2.prev = 1;
+          _context2.next = 4;
+          return axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('https://hacker-news.firebaseio.com/v0/beststories.json');
+        case 4:
+          risposta = _context2.sent;
+          if (!(risposta.status !== 200)) {
+            _context2.next = 7;
             break;
           }
-          throw new Error("Error fetching news details for ID ".concat(id, ": ").concat(response.statusText));
-        case 6:
-          return _context2.abrupt("return", response.data);
-        case 9:
-          _context2.prev = 9;
-          _context2.t0 = _context2["catch"](0);
+          throw new Error("Error fetching news IDs: ".concat(risposta.statusText));
+        case 7:
+          if (newsIDs.length !== 0 && allNews.length !== 0 && currentIndex !== 0) {
+            clearNews();
+          }
+          //console.log("clicked");
+          newsIDs = risposta.data;
+          //console.log(newsIDs);
+          loadNews();
+          _context2.next = 15;
+          break;
+        case 12:
+          _context2.prev = 12;
+          _context2.t0 = _context2["catch"](1);
           displayError(_context2.t0.message);
-          return _context2.abrupt("return", null);
-        case 13:
+        case 15:
+          _context2.prev = 15;
+          setLoading(false);
+          return _context2.finish(15);
+        case 18:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[0, 9]]);
+    }, _callee2, null, [[1, 12, 15, 18]]);
   }));
-  return _fetchNewsDetails.apply(this, arguments);
+  return _fetchBestStoriesIDs.apply(this, arguments);
 }
-function loadMoreNews() {
-  return _loadMoreNews.apply(this, arguments);
+function loadNews() {
+  return _loadNews.apply(this, arguments);
 }
-function _loadMoreNews() {
-  _loadMoreNews = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+function _loadNews() {
+  _loadNews = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
     var nextNewsIDs, newsDetailsPromises, newsDetails;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
           setLoading(true);
-          nextNewsIDs = _.slice(newsIDs, currentIndex, currentIndex + newsPerPage);
-          newsDetailsPromises = _.map(nextNewsIDs, fetchNewsDetails);
+          nextNewsIDs = _.slice(newsIDs, currentIndex, currentIndex + newsPerPagina); //prendo i primi 10 news
+          newsDetailsPromises = _.map(nextNewsIDs, fetchNewsDetails); //per ogni news prendo i dettagli 
           _context3.next = 5;
           return Promise.all(newsDetailsPromises);
         case 5:
           newsDetails = _context3.sent;
           _.forEach(newsDetails, function (news) {
+            //ogni news la mostro sul display
             if (news) {
-              // Check if news is not null
               allNews.push(news);
               displayNews(news);
             }
           });
-          currentIndex += newsPerPage;
+          currentIndex += newsPerPagina; //aggiorno l'index per poter caricare poi i successivi 10 
           if (currentIndex >= newsIDs.length) {
             loadMoreButton.style.display = 'none';
           }
@@ -134,7 +155,44 @@ function _loadMoreNews() {
       }
     }, _callee3);
   }));
-  return _loadMoreNews.apply(this, arguments);
+  return _loadNews.apply(this, arguments);
+}
+function fetchNewsDetails(_x) {
+  return _fetchNewsDetails.apply(this, arguments);
+}
+function _fetchNewsDetails() {
+  _fetchNewsDetails = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(id) {
+    var risposta;
+    return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+      while (1) switch (_context4.prev = _context4.next) {
+        case 0:
+          _context4.prev = 0;
+          _context4.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("https://hacker-news.firebaseio.com/v0/item/".concat(id, ".json"));
+        case 3:
+          risposta = _context4.sent;
+          if (!(risposta.status !== 200)) {
+            _context4.next = 6;
+            break;
+          }
+          throw new Error("Error fetching news details for ID ".concat(id, ": ").concat(risposta.statusText));
+        case 6:
+          return _context4.abrupt("return", risposta.data);
+        case 9:
+          _context4.prev = 9;
+          _context4.t0 = _context4["catch"](0);
+          displayError(_context4.t0.message);
+          return _context4.abrupt("return", null);
+        case 13:
+        case "end":
+          return _context4.stop();
+      }
+    }, _callee4, null, [[0, 9]]);
+  }));
+  return _fetchNewsDetails.apply(this, arguments);
+}
+function clearNews() {
+  newsContainer.innerHTML = '';
 }
 function displayNews(news) {
   var newsElement = document.createElement('div');
@@ -143,7 +201,10 @@ function displayNews(news) {
   var title = news.title || 'No title';
   var url = news.url || '#';
   var date = new Date(news.time * 1000).toLocaleString();
-  newsElement.innerHTML = "\n                <h3><a href=\"".concat(url, "\" target=\"_blank\">").concat(title, "</a></h3>\n                <p>").concat(date, "</p>\n            ");
+  var type = news.type || '';
+  var by = news.by || '';
+  newsElement.innerHTML = "\n                <h3><a href=\"".concat(url, "\" target=\"_blank\">").concat(title, "</a></h3>\n                <p>by ").concat(by, ", ").concat(type, ", ").concat(date, "</p>\n            "); //optato per .innerHTML per risparmiare righe di codice
+
   newsContainer.appendChild(newsElement);
 }
 function displayError(message) {
@@ -153,21 +214,52 @@ function displayError(message) {
 function setLoading(isLoading) {
   loadingMessage.style.display = isLoading ? 'block' : 'none';
 }
-function filterNews() {
-  var keyword = filterInput.value.toLowerCase();
-  var newsItems = document.querySelectorAll('.news-item');
-  _.forEach(newsItems, function (item) {
-    var title = item.dataset.title.toLowerCase();
-    if (_.includes(title, keyword)) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
+
+/* function searchNews() {
+    const ricerca = searchInput.value.toLowerCase();
+    const newsItems = document.querySelectorAll('.news-item');
+    _.forEach(newsItems, item => {
+        const title = item.dataset.title.toLowerCase();
+        if (_.includes(title, ricerca)) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+} */
+
+function searchNews() {
+  var ricerca = searchInput.value.toLowerCase();
+
+  // Clear the news container
+  clearNews();
+
+  // Filter the `allNews` array to find matching news based on the title
+  var filteredNews = _.filter(allNews, function (news) {
+    var title = (news.title || '').toLowerCase();
+    return _.includes(title, ricerca);
   });
+
+  // Display the filtered news
+  if (filteredNews.length > 0) {
+    _.forEach(filteredNews, function (news) {
+      return displayNews(news);
+    });
+  } else {
+    // Optionally, show a message if no news matches the search term
+    newsContainer.innerHTML = '<p>No news found</p>';
+  }
 }
-filterInput.addEventListener('input', filterNews);
-loadMoreButton.addEventListener('click', loadMoreNews);
-window.onload = fetchNewsIDs;
+searchInput.addEventListener('input', searchNews);
+loadMoreButton.addEventListener('click', loadNews);
+var newstories = document.getElementById('new');
+var beststories = document.getElementById('best');
+newstories.addEventListener('click', fetchNewStoriesIDs);
+beststories.addEventListener('click', fetchBestStoriesIDs);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  fetchNewStoriesIDs: fetchNewStoriesIDs,
+  fetchBestStoriesIDs: fetchBestStoriesIDs
+});
 
 /***/ }),
 
@@ -191,7 +283,86 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `body {
+  background-color: white;
+  color: #333;
+}
+body nav {
+  background-color: orange;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.299);
+  padding: 0 20px;
+  margin: 0px auto;
+  max-width: 70rem;
+}
+body nav ul {
+  display: flex;
+}
+body nav ul li {
+  margin: 0px 10px;
+  list-style-type: none;
+}
+body nav ul li:hover {
+  cursor: pointer;
+}
+body nav h1 {
+  text-transform: uppercase;
+  font-size: medium;
+}
+body .news-item {
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.299);
+  background-color: rgba(255, 255, 255, 0.916);
+  color: #333;
+  max-width: 60%;
+  margin: 20px auto;
+  padding: 0 30px;
+}
+body .news-item h3 {
+  margin-bottom: 7px;
+}
+body .news-item h3 a {
+  font-size: large;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: black;
+}
+body .news-item h3 a:hover {
+  color: #3333ff;
+}
+body .news-item p {
+  font-size: small;
+  margin-top: 0;
+}
+body #load-more {
+  background-color: orange;
+  color: #fff;
+  display: block;
+  margin: 20px auto;
+  height: 40px;
+  border-radius: 10px;
+}
+body #load-more:hover {
+  background-color: #ffb733;
+  color: #fff;
+  cursor: pointer;
+}
+body .search-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .search-input input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAiBA;EAJI,uBAKiC;EAJjC,WAAA;AAXJ;AAiBI;EAPA,wBAQqC;EAPrC,WAAA;EAQI,aAAA;EACA,eAAA;EACA,8BAAA;EACA,mBAAA;EACA,0CAAA;EACA,eAAA;EACA,gBAAA;EACA,gBAAA;AAdR;AAgBQ;EACI,aAAA;AAdZ;AAgBY;EACI,gBAAA;EACA,qBAAA;AAdhB;AAgBgB;EACI,eAAA;AAdpB;AAmBQ;EACI,yBAAA;EACA,iBAAA;AAjBZ;AAwBI;EACI,uBAAA;EACA,mBAAA;EACA,0CAAA;EA3CJ,4CA4CqC;EA3CrC,WAAA;EA4CI,cAAA;EACA,iBAAA;EACA,eAAA;AArBR;AAuBQ;EACI,kBAAA;AArBZ;AAuBY;EACI,gBAAA;EACA,qBAAA;EACA,+BAAA;EACA,YAAA;AArBhB;AAuBgB;EACI,cAAA;AArBpB;AA2BQ;EACI,gBAAA;EACA,aAAA;AAzBZ;AA6BI;EAvEA,wBAwEqC;EAvErC,WAAA;EAwEI,cAAA;EACA,iBAAA;EACA,YAAA;EACA,mBAAA;AA1BR;AA4BQ;EA9EJ,yBA+EyC;EA9EzC,WAAA;EA+EQ,eAAA;AAzBZ;AA8BI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AA5BR;AA8BQ;EACI,YAAA;EACA,kBAAA;EACA,uBAAA;EACA,aAAA;AA5BZ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22637,8 +22808,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 
 
+window.onload = _hackerNews__WEBPACK_IMPORTED_MODULE_0__["default"].fetchNewStoriesIDs();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle0f63fbeee9c24e7e5482.js.map
+//# sourceMappingURL=bundle6a9395d6d3b5ae1a6faf.js.map
