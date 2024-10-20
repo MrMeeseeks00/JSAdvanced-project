@@ -17,6 +17,7 @@
 
 body {
     @include set-background-and-text(white);
+    margin: 0px;
 
     nav {
         @include set-background-and-text(orange);
@@ -26,7 +27,7 @@ body {
         align-items: center;
         box-shadow: 0 5px 8px rgba(0, 0, 0, 0.299);
         padding: 0 20px;
-        margin: 0px auto;
+        margin: 1rem auto;
         max-width: 70rem;
 
         ul {
@@ -89,12 +90,18 @@ body {
         margin: 20px auto;
         height: 40px;
         border-radius: 10px;
+        border: 0 black solid;
 
         &:hover {
             @include set-background-and-text(lighten($color: orange, $amount: 10%));
             cursor: pointer;
+            border: 1px orange solid;
         }
 
+    }
+
+    #loading {
+        text-align: center;
     }
 
     .search-input {
@@ -103,6 +110,7 @@ body {
         align-items: center;
 
         input {
+            margin-left: 5px;
             padding: 5px;
             border-radius: 5px;
             border: 1px solid black;
@@ -110,4 +118,11 @@ body {
         }
     }
 
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        max-height: 10rem;
+        background-color: rgb(186, 186, 186);
+        width: 100%;
+    }
 }
